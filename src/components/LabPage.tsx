@@ -18,6 +18,7 @@ import {
   LANGUAGE_LABELS,
   LanguageKey,
 } from '../data/labData';
+import { InnovaBotAssistant } from './InnovaBotAssistant';
 
 interface LabPageProps {
   theme: 'light' | 'dark';
@@ -812,13 +813,28 @@ export function LabPage({ theme, onOpenCurriculum }: LabPageProps) {
 
               <div className="mt-4 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-subtle)] p-4">
                 <p className="text-xs font-semibold text-[var(--accent-primary)]">
-                  {LANGUAGE_LABELS[botLang]} Explanation
+                  {LANGUAGE_LABELS[botLang]} Lesson Summary
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--text-primary)]">
                   {activeLesson.innovabotExplanations[botLang]}
                 </p>
               </div>
             </div>
+
+            <InnovaBotAssistant
+              contextTitle={activeLesson.title}
+              grade={activeLesson.gradeTag}
+              subject="ESP32 MicroPython & Coding"
+              codeSnippet={codeText}
+              defaultLanguage={botLang}
+              onLanguageChange={setBotLang}
+              quickPrompts={[
+                'Explain my current MicroPython code step by step',
+                'Check my code for logic or syntax mistakes',
+                'Translate the key programming concepts to CAPS English',
+              ]}
+              compact
+            />
 
             <div className="rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-surface)] p-5">
               <p className="text-xs font-medium text-[var(--accent-primary)]">

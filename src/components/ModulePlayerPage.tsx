@@ -15,6 +15,7 @@ import { FormEvent, useEffect, useRef, useState } from 'react';
 import { APP_IMAGES } from '../data/assets';
 import { CURRICULUM_MODULES, CurriculumModule, LearningMode } from '../data/curriculumData';
 import { LANGUAGE_LABELS, LanguageKey } from '../data/labData';
+import { InnovaBotAssistant } from './InnovaBotAssistant';
 import { PageRoute } from './Navbar';
 
 interface ModulePlayerPageProps {
@@ -556,6 +557,19 @@ export function ModulePlayerPage({
                 </p>
               )}
             </div>
+
+            <InnovaBotAssistant
+              contextTitle={`${module.grade} — ${module.strand}`}
+              grade={module.grade}
+              subject={module.subject}
+              codeSnippet={module.workedExample.codeOrFormula ?? module.summary}
+              quickPrompts={[
+                `Explain ${module.strand} simply with an everyday example`,
+                'Walk me through the worked example step by step',
+                'Give me a quick CAPS practice question',
+              ]}
+              compact
+            />
           </aside>
         </div>
       )}

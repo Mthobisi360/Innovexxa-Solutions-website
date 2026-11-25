@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import { ChatbotWidget } from './components/ChatbotWidget';
 import { CurriculumPage } from './components/CurriculumPage';
 import { Footer } from './components/Footer';
 import { HomePage } from './components/HomePage';
@@ -164,6 +165,7 @@ export default function App() {
       </main>
 
       <Footer onNavigate={handleNavigate} />
+      <ChatbotWidget currentPage={currentPage} activeModule={activeModule} />
     </div>
   );
 }
