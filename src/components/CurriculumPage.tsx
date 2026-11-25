@@ -1,5 +1,6 @@
 import { BookOpen, Headphones, Radio, Search, Video } from 'lucide-react';
 import { useMemo, useState } from 'react';
+import { APP_IMAGES } from '../data/assets';
 import {
   ALL_GRADES_BY_PHASE,
   CURRICULUM_MODULES,
@@ -26,7 +27,7 @@ const PHASE_SECTIONS: {
     title: '1. Foundation Phase (Grades R–3): Coding and Robotics',
     subtitle:
       '1 hour/week in Grades R–2 and 2 hours/week in Grade 3 across Pattern Recognition, Algorithms & Coding, Robotics Skills, Internet & E-Communications, and Application Skills.',
-    image: '/src/assets/images/students_coding_robotics_1795425463117.jpg',
+    image: APP_IMAGES.studentsCodingRobotics,
     imageAlt: 'Young South African learners building a wheeled robot chassis in Foundation and Intermediate Phase class',
   },
   {
@@ -34,7 +35,7 @@ const PHASE_SECTIONS: {
     title: '2. Intermediate Phase (Grades 4–6): Coding and Robotics',
     subtitle:
       '2 hours/week across Algorithms & Coding, Robotics Skills, Internet & E-Communications, and Application Skills, alongside Term 1–4 PAT builds and Tests/Exams.',
-    image: '/src/assets/images/mentor_classroom_session_1795425463505.jpg',
+    image: APP_IMAGES.mentorClassroomSession,
     imageAlt: 'South African STEM mentor demonstrating microcontroller robotics and code on a tablet to learners',
   },
   {
@@ -42,7 +43,7 @@ const PHASE_SECTIONS: {
     title: '3. FET Phase (Grades 10–12): Physical Sciences',
     subtitle:
       '4 hours/week across Matter & Materials, Chemical Change, Chemical Systems, Mechanics, Waves, Sound & Light, Electricity & Magnetism, and Practical Investigation Skills.',
-    image: '/src/assets/images/students_physics_lab_1795425464242.jpg',
+    image: APP_IMAGES.studentsPhysicsLab,
     imageAlt: 'South African FET high school students performing circuit and optics investigations in Physical Sciences',
   },
 ];

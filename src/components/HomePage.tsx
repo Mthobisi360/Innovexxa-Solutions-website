@@ -2,6 +2,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, BookOpen, Cpu, FlaskConical, Play } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { APP_IMAGES } from '../data/assets';
 import { PhaseId } from '../data/curriculumData';
 import { PageRoute } from './Navbar';
 
@@ -247,7 +248,7 @@ export function HomePage({ onNavigate, onSelectPhaseFilter }: HomePageProps) {
           <div className="hero-stagger lg:col-span-6">
             <div className="relative h-full min-h-[280px] overflow-hidden rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-surface)]">
               <img
-                src="/src/assets/images/hero_mobile_stem_lab_1795425464074.jpg"
+                src={APP_IMAGES.heroMobileStemLab}
                 alt="South African high school students collaborating around an ESP32 mobile STEM lab bench with laptops and breadboard circuits"
                 referrerPolicy="no-referrer"
                 className="h-full w-full object-cover"
@@ -320,7 +321,7 @@ export function HomePage({ onNavigate, onSelectPhaseFilter }: HomePageProps) {
 
             <div className="mt-6 overflow-hidden rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-surface)]">
               <img
-                src="/src/assets/images/mentor_classroom_session_1795425463505.jpg"
+                src={APP_IMAGES.mentorClassroomSession}
                 alt="South African STEM mentor guiding learners on a tablet and breadboard inside a mobile learning pod"
                 referrerPolicy="no-referrer"
                 className="aspect-video w-full object-cover"
@@ -550,7 +551,7 @@ export function HomePage({ onNavigate, onSelectPhaseFilter }: HomePageProps) {
         <div className="mt-6 grid gap-6 md:grid-cols-2">
           <article className="overflow-hidden rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-surface)]">
             <img
-              src="/src/assets/images/students_coding_robotics_1795425463117.jpg"
+              src={APP_IMAGES.studentsCodingRobotics}
               alt="Young South African primary school learners building a wheeled robot chassis together in class"
               referrerPolicy="no-referrer"
               className="aspect-[4/3] w-full object-cover"
@@ -594,7 +595,7 @@ export function HomePage({ onNavigate, onSelectPhaseFilter }: HomePageProps) {
 
           <article className="overflow-hidden rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-surface)]">
             <img
-              src="/src/assets/images/students_physics_lab_1795425464242.jpg"
+              src={APP_IMAGES.studentsPhysicsLab}
               alt="South African high school students conducting Physical Sciences circuit and optics experiments"
               referrerPolicy="no-referrer"
               className="aspect-[4/3] w-full object-cover"

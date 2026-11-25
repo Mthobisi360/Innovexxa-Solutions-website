@@ -12,6 +12,7 @@ import {
   Video,
 } from 'lucide-react';
 import { FormEvent, useEffect, useRef, useState } from 'react';
+import { APP_IMAGES } from '../data/assets';
 import { CURRICULUM_MODULES, CurriculumModule, LearningMode } from '../data/curriculumData';
 import { LANGUAGE_LABELS, LanguageKey } from '../data/labData';
 import { PageRoute } from './Navbar';
@@ -793,7 +794,7 @@ export function ModulePlayerPage({
           <div className="space-y-4 lg:col-span-8">
             <div className="relative overflow-hidden rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-surface)]">
               <img
-                src="/src/assets/images/mentor_classroom_session_1795425463505.jpg"
+                src={APP_IMAGES.mentorClassroomSession}
                 alt="Live South African STEM classroom mentor broadcast"
                 referrerPolicy="no-referrer"
                 className="aspect-video w-full object-cover"
