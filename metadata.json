@@ -1,0 +1,6 @@
+{
+  "name": "Innovexa Solutions",
+  "description": "Offline-capable CAPS Coding, Robotics, and Physical Sciences learning platform with interactive STEM simulations, multilingual code-switching tutoring, and modular multimedia lessons.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
